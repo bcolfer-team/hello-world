@@ -10,6 +10,7 @@ pipeline {
       }
     }
     stage('Deploy') {
+      agent any
       options {
         timeout(time: 30, unit: 'SECONDS')
       }
