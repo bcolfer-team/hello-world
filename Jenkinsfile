@@ -2,6 +2,10 @@ pipeline {
   agent any
   stages {
     stage('hello') {
+      environment {
+        TEST_USER_USR = 'foo'
+        TEST_USER_PSW = 'foo_p'
+      }
       steps {
         echo "hello ${parameter.name}"
         sh 'java --version'
