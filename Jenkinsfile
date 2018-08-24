@@ -17,15 +17,15 @@ pipeline {
         message 'Should we conntinue?'
       }
       steps {
-        echo "Continuing with deployment"
+        echo 'Continuing with deployment'
       }
     }
   }
   environment {
-    MY_NAME = "Brian"
+    MY_NAME = 'Brian'
     TEST_USER = credentials('test-user')
   }
   parameters {
-    string(name: 'Name', defaultValue: 'who are you',description: 'Who should I greet?' )
+    string(name: 'Name', defaultValue: 'who are you', description: 'Who should I greet?')
   }
 }
