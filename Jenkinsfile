@@ -9,6 +9,17 @@ pipeline {
         echo "${TEST_USER_PSW}"
       }
     }
+    stage('Deploy') {
+      options {
+        timeout(time: 30, unit: 'SECONDS')
+      }
+      input {
+        message 'Should we conntinue?'
+      }
+      steps {
+        echo "Continuing with deployment"
+      }
+    }
   }
   environment {
     MY_NAME = "Brian"
